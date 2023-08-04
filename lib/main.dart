@@ -54,13 +54,27 @@ class _MyHomePageState extends State<MyHomePage> {
   List<ItemModel> items = [];
   @override
   void initState() {
- 
     super.initState();
-    items.add(ItemModel("asset/icecream2.png", "China Icecream Flavored", "10", "500 taka"));
-    items.add(ItemModel("asset/icecream.jpg", "Japan Icecream Flavored", "5", "400 taka"));
-    items.add(ItemModel("asset/icecream2.png", "Igloo Chocobar icecream", "6", "345 taka"));
-
+    items.add(ItemModel(
+        "asset/icecream2.png", "China Icecream Flavored", "10", "500 taka"));
+    items.add(ItemModel(
+        "asset/icecream.jpg", "Japan Icecream Flavored", "5", "400 taka"));
+    items.add(ItemModel(
+        "asset/icecream2.png", "Igloo Chocobar icecream", "6", "345 taka"));
+    items.add(ItemModel(
+        "asset/icecream2.png", "China Icecream Flavored", "10", "500 taka"));
+    items.add(ItemModel(
+        "asset/icecream.jpg", "Japan Icecream Flavored", "5", "400 taka"));
+    items.add(ItemModel(
+        "asset/icecream2.png", "Igloo Chocobar icecream", "6", "345 taka"));
+    items.add(ItemModel(
+        "asset/icecream2.png", "China Icecream Flavored", "10", "500 taka"));
+    items.add(ItemModel(
+        "asset/icecream.jpg", "Japan Icecream Flavored", "5", "400 taka"));
+    items.add(ItemModel(
+        "asset/icecream2.png", "Igloo Chocobar icecream", "6", "345 taka"));
   }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -101,9 +115,76 @@ class _MyHomePageState extends State<MyHomePage> {
                   itemBuilder: (BuildContext context, int index) {
                     return Padding(
                       padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
-                      child: ListItem(items[index].icon,items[index].title,items[index].quantity,items[index].price),
+                      child: ListItem(items[index].icon, items[index].title,
+                          items[index].quantity, items[index].price),
                     );
                   }),
+            ),
+            Container(
+              height: 100,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(16),
+                    topRight: Radius.circular(16)),
+                boxShadow: [
+                  BoxShadow(
+                      color: Colors.black12, spreadRadius: 2, blurRadius: 10),
+                ],
+              ),
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "13.51 taka",
+                            style: TextStyle(
+                                fontSize: 30,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.deepOrange),
+                          ),
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              "View Details",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w300,
+                                  color: Colors.deepOrange),
+                            ),
+                          )
+                        ],
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(16),
+                          color: Colors.deepOrange,
+                        ),
+
+                        width: 100,
+                        height: 60,
+                        child: Center(
+                          child: Text(
+                            "Buy now",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+
+                                color: Colors.white),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
             )
           ],
         ),
